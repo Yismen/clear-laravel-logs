@@ -3,13 +3,13 @@
     "description": "Clear Laravel log files",
     "require": {
         "php" : ">=7.0",
-        "illuminate/filesystem": "~5.7|~5.8",
-        "illuminate/console": "~5.7|~5.8",
-        "illuminate/support": "~5.7|~5.8"
+        "illuminate/filesystem": ">=5.7",
+        "illuminate/console": ">=5.7",
+        "illuminate/support": ">=5.7"
     },
     "require-dev": {
         "mockery/mockery": "^1.0",
-        "orchestra/testbench": "^3.7",
+        "orchestra/testbench": ">=3.7",
         "phpunit/phpunit": "^8.0"
     },
     "license": "MIT",
