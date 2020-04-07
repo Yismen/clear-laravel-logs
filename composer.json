@@ -1,5 +1,5 @@
 {
-    "name": "dainsys/clar-logs",
+    "name": "dainsys/clear-log-files",
     "description": "Clear Laravel log files",
     "type": "composer-plugin",
     "require": {
@@ -17,7 +17,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Dainsys\\": "src/"
+            "Dainsys\\Commands\\": "src/"
         }
     },
     "extra": {

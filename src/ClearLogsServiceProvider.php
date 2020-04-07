@@ -18,7 +18,7 @@ class ClearLogsServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/clearlogs.php', 'clearlogs'
+            __DIR__.'/config/clearlogs.php', 'clearlogs'
         );
     }
 }

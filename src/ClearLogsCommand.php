@@ -13,7 +13,7 @@ class ClearLogsCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'dainsys:logs2 
+    protected $signature = 'dainsys:laravel-logs
         {filename=laravel- : The pattern with which filename starts.} 
         {--keep=4 : The number of files to keep.}
         {--clear : Remove all files except last (n) files, otherwise just print a list of filenames!}
