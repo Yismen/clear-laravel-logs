@@ -1,0 +1,30 @@
+{
+    "name": "dainsys/clar-logs",
+    "description": "Clear Laravel log files",
+    "type": "composer-plugin",
+    "require": {
+        "illuminate/filesystem": "5.7",
+        "illuminate/console": "5.7",
+        "illuminate/support": "5.7"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yismen Jorge",
+            "email": "yjorge@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Dainsys\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dainsys\\Commands\\ClearLogsServiceProvider"
+            ]
+        }
+    }
+}
