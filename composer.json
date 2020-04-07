@@ -1,7 +1,6 @@
 {
     "name": "dainsys/clear-log-files",
     "description": "Clear Laravel log files",
-    "type": "composer-plugin",
     "require": {
         "php" : ">=7.0",
         "illuminate/filesystem": "~5.7|~5.8",
