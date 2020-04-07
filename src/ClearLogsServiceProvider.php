@@ -13,6 +13,10 @@ class ClearLogsServiceProvider extends ServiceProvider
                 ClearLogsCommand::class
             ]);
         }
+
+        $this->publishes([
+            __DIR__.'/config/clearlogs.php' => config_path('clearlogs.php'),
+        ]);
     }
 
     public function register()

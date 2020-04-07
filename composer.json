@@ -21,6 +21,11 @@
             "Dainsys\\Commands\\": "src/"
         }
     },
+    "autoload-dev": {
+        "classmap": [
+            "tests/Middleware/MiddlewareTest.php"
+        ]
+    },
     "extra": {
         "laravel": {
             "providers": [
