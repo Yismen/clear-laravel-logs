@@ -9,7 +9,7 @@ Allows to list or delete all laravel...log logs files
             "url": "https://github.com/Yismen/clear-log-files.git"
         }
     ]
-- Step 2: Run 'composer require "dainsys/clear-log-files:^v1.*" command' to install as a dependency
+- Step 2: Run 'composer require "dainsys/clear-log-files:^v1" command' to install as a dependency
 - Step 3: Optionally, you may run 'php artisan vendor:publish' to publish the config file 
 
 # Ussage

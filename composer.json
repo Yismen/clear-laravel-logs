@@ -3,9 +3,7 @@
     "description": "Clear Laravel log files",
     "type": "composer-plugin",
     "require": {
-        "illuminate/filesystem": "5.7.*",
-        "illuminate/console": "5.7.*",
-        "illuminate/support": "5.7.*"
+        "laravel/framework": "5.7.*"
     },
     "license": "MIT",
     "authors": [
