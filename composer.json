@@ -25,10 +25,10 @@
             "Dainsys\\Commands\\": "src/"
         }
     },
-    "autoload-dev": {
-        "classmap": [
-            "src/tests/ClearLogFilesTest.php"
-        ]
+    "autoload-dev":  {
+        "psr-4": {
+            "Dainsys\\Commands\\Tests\\": "tests/"
+        }
     },
     "extra": {
         "laravel": {
