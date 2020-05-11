@@ -11,7 +11,7 @@ Allows to list or delete all laravel...log logs files
         }
     ]
     ```
-- Step 2: Run `composer require "dainsys/clear-log-files:^v2"` command to install as a dependency
+- Step 2: Run `composer require "dainsys/clear-log-files:>=2.0"` command to install as a dependency
 - Step 3: The Package should be auto-discovered by Laravel. However, you could all register it in your config.app file within the providers array:
     ```php
         'providers' => [
