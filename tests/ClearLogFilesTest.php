@@ -61,12 +61,11 @@ class ClearLogFilesTest extends TestCase
 
         $this->artisan('dainsys:laravel-logs --clear --keep=0');
 
-        $imploded = implode('","', ["laravel-1.log","laravel-2.log","laravel-3.log"]);
+        $imploded = implode('","', ["laravel-1.log", "laravel-2.log", "laravel-3.log"]);
 
         $this
             ->artisan('dainsys:laravel-logs')
             // ->expectsOutput('["' . $imploded . '"]')
-            ->assertExitCode(0)
-            ;
+            ->assertExitCode(0);
     }
 }
