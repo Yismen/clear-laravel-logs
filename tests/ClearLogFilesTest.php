@@ -55,6 +55,28 @@ class ClearLogFilesTest extends TestCase
     }
 
     /** @test */
+    public function it_works_with_different_file_name(): void
+    {
+        touch($this->logDirectory . '/dainsys-log-1.log', time() - 3600);
+
+        $this->artisan('dainsys:laravel-logs dainsys-log- --clear --keep=0');
+
+        $this->assertFileNotExists($this->logDirectory . '/dainsys-log-1.log');
+    }
+
+    /** @test */
+    public function it_uses_file_name_from_config(): void
+    {
+        $filename = config('dainsys_clearlogs.prefix');
+
+        touch($this->logDirectory .  "/{$filename}1.log", time() - 3600);
+
+        $this->artisan('dainsys:laravel-logs --clear --keep=0');
+
+        $this->assertFileNotExists($this->logDirectory . "/{$filename}1.log");
+    }
+
+    /** @test */
     public function it_return_an_array_with_filenames_if_clear_option_is_not_provided(): void
     {
         $this->createLogFile(['laravel-1.log', 'laravel-2.log', 'laravel-3.log']);

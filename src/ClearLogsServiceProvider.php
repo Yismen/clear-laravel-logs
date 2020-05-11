@@ -14,15 +14,16 @@ class ClearLogsServiceProvider extends ServiceProvider
             ]);
         }
 
-        // $this->publishes([
-        //     __DIR__.'/config/clearlogs.php' => config_path('clearlogs.php'),
-        // ]);
+        $this->publishes([
+            __DIR__ . '/config/dainsys_clearlogs.php' => config_path('dainsys_clearlogs.php'),
+        ]);
     }
 
     public function register()
     {
-        // $this->mergeConfigFrom(
-        //     __DIR__.'/config/clearlogs.php', 'clearlogs'
-        // );
+        $this->mergeConfigFrom(
+            __DIR__ . '/config/dainsys_clearlogs.php',
+            'dainsys_clearlogs'
+        );
     }
 }

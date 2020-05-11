@@ -14,7 +14,7 @@ class ClearLogsCommand extends Command
      * @var string
      */
     protected $signature = 'dainsys:laravel-logs
-        {filename=laravel- : The pattern with which filename starts.} 
+        {filename? : The pattern with which filename starts.} 
         {--keep=4 : The number of files to keep.}
         {--clear : Remove all files except last (n) files, otherwise just print a list of filenames!}
    ';
@@ -33,11 +33,11 @@ class ClearLogsCommand extends Command
      */
     protected $files;
 
-     /**
-      * Filesystem manager
-      * 
-      * @var Illuminate\Filesystem\Filesystem
-      */
+    /**
+     * Filesystem manager
+     * 
+     * @var Illuminate\Filesystem\Filesystem
+     */
     protected $filesystem;
 
     /**
@@ -48,26 +48,25 @@ class ClearLogsCommand extends Command
     public function __construct(Filesystem $filesystem)
     {
         parent::__construct();
-        
+
         $this->filesystem = $filesystem;
     }
-    
+
     /**
      * Execute the console command.
      *
      * @return mixed
      */
     public function handle()
-    {      
+    {
         $this->files = $this->startUp();
 
-        
-        if($this->wantsListOnly())
-        {
+
+        if ($this->wantsListOnly()) {
             return $this->info($this->getFileNamesList());
         }
 
-        $this->deleteFiles($this->files);        
+        $this->deleteFiles($this->files);
     }
 
     /**
@@ -78,9 +77,9 @@ class ClearLogsCommand extends Command
      */
     protected function getFileNamesList()
     {
-        return $this->files == null 
+        return $this->files == null
             ? "Nothing to list!"
-            : $this->files->map(function($file) {
+            : $this->files->map(function ($file) {
                 return $file->getFileName();
             });
     }
@@ -97,8 +96,8 @@ class ClearLogsCommand extends Command
 
         $count = count($this->files);
 
-        if ($count > 0) {  
-            $this->files->each(function($file) {
+        if ($count > 0) {
+            $this->files->each(function ($file) {
                 $this->filesystem->delete($file);
             });
         }
@@ -113,10 +112,12 @@ class ClearLogsCommand extends Command
      */
     protected function startUp()
     {
+        $this->file_name = $this->argument('filename') ?: config('dainsys_clearlogs.prefix');
+
         return collect(
             $this->filesystem->allFiles(storage_path('logs'))
-        )->sortByDesc('mtime')->filter(function($file) {
-            return Str::startsWith($file->getFilename(), $this->argument('filename'));
+        )->sortByDesc('mtime')->filter(function ($file) {
+            return Str::startsWith($file->getFilename(), $this->file_name);
         });
     }
 
@@ -125,7 +126,7 @@ class ClearLogsCommand extends Command
      *
      * @return boolean
      */
-    protected function wantsListOnly():bool
+    protected function wantsListOnly(): bool
     {
         return $this->option('clear') == false;
     }
@@ -141,7 +142,7 @@ class ClearLogsCommand extends Command
         $keep = (int) $this->option('keep');
         $count = $this->files->count();
 
-        if($count > $keep) {
+        if ($count > $keep) {
             return $this->files->splice($count - $keep);
         }
 
