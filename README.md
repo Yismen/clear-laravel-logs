@@ -7,11 +7,11 @@ Allows to list or delete all laravel...log logs files
     "repositories": [
         {
             "type": "git",
-            "url": "https://github.com/Yismen/clear-log-files.git"
+            "url": "https://github.com/Yismen/clear-laravel-logs.git"
         }
     ]
     ```
-- Step 2: Run `composer require "dainsys/clear-log-files:>=2.0"` command to install as a dependency
+- Step 2: Run `composer require dainsys/clear-laravel-logs` command to install as a dependency
 - Step 3: The Package should be auto-discovered by Laravel. However, you could all register it in your config.app file within the providers array:
     ```php
         'providers' => [
