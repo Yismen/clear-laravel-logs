@@ -1,5 +1,5 @@
 {
-    "name": "dainsys/clear-log-files",
+    "name": "dainsys/clear-laravel-logs",
     "description": "Clear Laravel log files",
     "require": {
         "php" : ">=7.0",
