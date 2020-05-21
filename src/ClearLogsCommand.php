@@ -1,6 +1,6 @@
 <?php
 
-namespace Dainsys\Commands;
+namespace Dainsys\Commands\ClearLogs;
 
 use Illuminate\Support\Str;
 use Illuminate\Console\Command;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Dainsys\Commands\Tests;
+namespace Dainsys\Commands\ClearLogs\Tests;
 
 use Dainsys\Commands\ClearLogsServiceProvider;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;

@@ -15,7 +15,7 @@ Allows to list or delete all laravel...log logs files
 - Step 3: The Package should be auto-discovered by Laravel. However, you could all register it in your config.app file within the providers array:
     ```php
         'providers' => [
-            App\Providers\RouteServiceProvider::class,
+            Dainsys\Commands\ClearLogs\ClearLogsServiceProvider::class,
         ]
     ```
 

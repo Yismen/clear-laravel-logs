@@ -22,7 +22,7 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Dainsys\\Commands\\": "src/"
+            "Dainsys\\Commands\\ClearLogs\\": "src/"
         }
     },
     "autoload-dev":  {

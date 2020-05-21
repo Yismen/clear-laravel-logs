@@ -1,6 +1,6 @@
 <?php
 
-namespace Dainsys\Commands\Tests;
+namespace Dainsys\Commands\ClearLogs\Tests;
 
 class ClearLogFilesTest extends TestCase
 {
