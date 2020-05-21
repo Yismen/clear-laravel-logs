@@ -2,7 +2,7 @@
 
 namespace Dainsys\Commands\ClearLogs\Tests;
 
-use Dainsys\Commands\ClearLogsServiceProvider;
+use Dainsys\Commands\ClearLogs\ClearLogsServiceProvider;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
 class TestCase extends OrchestraTestCase
