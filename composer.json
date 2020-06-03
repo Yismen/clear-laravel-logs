@@ -27,7 +27,7 @@
     },
     "autoload-dev":  {
         "psr-4": {
-            "Dainsys\\Commands\\Tests\\": "tests/"
+            "Dainsys\\Commands\\ClearLogs\\Tests\\": "tests/"
         }
     },
     "extra": {
