@@ -33,7 +33,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Dainsys\\Commands\\ClearLogsServiceProvider"
+                "Dainsys\\Commands\\ClearLogs\\ClearLogsServiceProvider"
             ]
         }
     }
