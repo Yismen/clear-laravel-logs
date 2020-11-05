@@ -1,7 +1,8 @@
 <?php
 
-namespace Dainsys\Commands\ClearLogs;
+namespace Dainsys\ClearLogs;
 
+use Dainsys\ClearLogs\Commands\ClearLogsCommand;
 use Illuminate\Support\ServiceProvider;
 
 class ClearLogsServiceProvider extends ServiceProvider
@@ -15,14 +16,14 @@ class ClearLogsServiceProvider extends ServiceProvider
         }
 
         $this->publishes([
-            __DIR__ . '/config/dainsys_clearlogs.php' => config_path('dainsys_clearlogs.php'),
+            __DIR__ . '/../config/dainsys_clearlogs.php' => config_path('dainsys_clearlogs.php'),
         ]);
     }
 
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/config/dainsys_clearlogs.php',
+            __DIR__ . '/../config/dainsys_clearlogs.php',
             'dainsys_clearlogs'
         );
     }

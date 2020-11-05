@@ -1,11 +1,11 @@
 <?php
 
-namespace Dainsys\Commands\ClearLogs\Tests;
+namespace Dainsys\ClearLogs\Tests;
 
-use Dainsys\Commands\ClearLogs\ClearLogsServiceProvider;
-use Orchestra\Testbench\TestCase as OrchestraTestCase;
+use Dainsys\ClearLogs\ClearLogsServiceProvider;
+use Orchestra\Testbench\TestCase as TestbenchTestCase;
 
-class TestCase extends OrchestraTestCase
+class TestCase extends TestbenchTestCase
 {
     /**
      * The log directory path.
@@ -44,7 +44,9 @@ class TestCase extends OrchestraTestCase
      */
     protected function getPackageProviders($app): array
     {
-        return [ClearLogsServiceProvider::class];
+        return [
+            ClearLogsServiceProvider::class
+        ];
     }
 
     /**

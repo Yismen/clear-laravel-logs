@@ -3,13 +3,13 @@
     "description": "Clear Laravel log files",
     "require": {
         "php" : ">=7.0",
-        "illuminate/filesystem": ">=5.7",
-        "illuminate/console": ">=5.7",
-        "illuminate/support": ">=5.7"
+        "illuminate/filesystem": "^5.7 || ^5.8 || ^6.0 || ^7.0",
+        "illuminate/console": "^5.7 || ^5.8 || ^6.0 || ^7.0",
+        "illuminate/support": "^5.7 || ^5.8 || ^6.0 || ^7.0"
     },
     "require-dev": {
         "mockery/mockery": "^1.0",
-        "orchestra/testbench": ">=3.7",
+        "orchestra/testbench": "^5.4",
         "phpunit/phpunit": "^8.0"
     },
     "license": "MIT",
@@ -22,18 +22,18 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Dainsys\\Commands\\ClearLogs\\": "src/"
+            "Dainsys\\ClearLogs\\": "src/"
         }
     },
     "autoload-dev":  {
         "psr-4": {
-            "Dainsys\\Commands\\ClearLogs\\Tests\\": "tests/"
+            "Dainsys\\ClearLogs\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Dainsys\\Commands\\ClearLogs\\ClearLogsServiceProvider"
+                "Dainsys\\ClearLogs\\ClearLogsServiceProvider"
             ]
         }
     }
